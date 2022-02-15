@@ -7,4 +7,7 @@ var app = express()
     app.set('views', path.join(__dirname, 'views'))
     app.set('view engine', 'ejs')
     app.get('/', (req, res) => res.render('pages/index'))
+    app.get('/db', (req,res)=>{
+        var data = {results: [1,2,3,4]}
+    })
     app.listen(PORT, () => console.log(`Listening on ${ PORT }`))

@@ -47,10 +47,19 @@ b {
 }
 
 button {
-  background-color: #b5121a;
+  background-color: #494b4c;
   color: #ffffff;
   font-size: 17px;
   height: 40px;
   border-radius: 5px;
-  border-color: #b5121a;
+  border-color: #494b4c;
+}
+
+select {
+  color: #ffffff;
+  font-size: 17px;
+  height: 40px;
+  width: 150px;
+  border-radius: 5px;
+  border-color: #494b4c;
 }
