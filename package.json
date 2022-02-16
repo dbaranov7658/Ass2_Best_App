@@ -13,7 +13,9 @@
   "dependencies": {
     "ejs": "^3.1.5",
     "express": "^4.15.2",
-    "pg": "^8.7.3"
+    "pg": "^8.7.3",
+    "psql": "^0.0.1",
+    "uuid": "^8.3.2"
   },
   "devDependencies": {
     "got": "^11.3.0",

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="us">
+<head>
+    <title>Best calculator</title>
+    <link rel="stylesheet" href="public/stylesheets/main.css">
+    <script src="/javascript/Javascript.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body style="margin: unset; background-color: #5b8154">
+<div class="row">
+    <div class="column middle" id="MainContainer" style="background-color: #807474; height: 100vh; position: relative">
+        <div class="row" style="width: 100%; height: 40px; background-color: #857351">
+
+        </div>
+
+        <h1 style="padding-left: 28px" class="mainText">Rectangle app</h1>
+        <div class="row" id="Container" style="width: 40%; height: 650px; background-color: #d3d3d5; margin-left: 30px" ;>
+            <div class="column" style="color: #000000; padding-top: 20px; width: 100%">
+                <h2 style="padding-left: 15px">All rectangles</h2>
+            </div>
+
+            <div style="padding: 0 15px 0 15px">
+                <table style="width:100%; border: 1px solid gray" >
+                    <tr style="height: 30px" secondId="position">
+                        <th style="width: 10%; background-color: #e8e4e4; color: #0a0a0a">Name</th>
+                        <th style="width: 10%; background-color: #e8e4e4; color: #0a0a0a">Color</th>
+                        <th style="width: 10%; background-color: #e8e4e4; color: #0a0a0a">Functionality</th>
+                    </tr>
+                    <% results.forEach(function(r) {
+                        %>
+                    <tr style="height: 30px" secondId="position">
+                        <th><a href="/rectanglePage<%= r.Id  %>"><%= r.name  %></a></th>
+                        <th><%= r.color  %></th>
+                        <th style="width: 10%; color: #494b4c">
+                            <form action="/deleteRectangle<%= r.Id  %>" method="post">
+                                <button type="submit" style="height: 30px">Delete</button>
+                            </form>
+
+                        </th>
+                    </tr>
+                    <%  })%>
+
+                </table>
+            </div>
+            <div class="row" style="width: 100%; padding-left: 15px; padding-top: 30px">
+                <button style="width: 132px" onclick="addNew()"> Add new</button>
+            </div>
+
+
+        </div>
+
+        <div class="row" style="width: 100%; height: 40px; background-color: #857351; position: absolute; bottom: 0">
+
+        </div>
+    </div>
+</div>
+
+
+
+</body>
+</html>
