@@ -64,6 +64,7 @@ addNewRec = () => {
 }
 
 validation = () => {
+    onAdd()
     let name = document.getElementById("name").value
 
     let color = document.getElementById("color").value
