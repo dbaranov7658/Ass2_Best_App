@@ -15,11 +15,11 @@
         </div>
 
         <h1 style="padding-left: 28px" class="mainText">Rectangle app</h1>
-
-        <form action="/updateRectangle<%= results[0].Id  %>" method="post">
+        <button style="width: 132px; margin-left: 29px" onclick="goBackFromEdit()">Back</button>
+        <form action="/updateRectangle<%= results[0].Id  %>" onsubmit="return validation()" method="post" id="form">
         <div class="row" id="Container" style="width: 70%; height: 650px; background-color: #d3d3d5; margin-left: 30px" ;>
             <div class="column" style="color: #000000; padding-top: 20px; width: 100%">
-                <h2 style="padding-left: 15px">Specific rectangle</h2>
+                <h2 style="padding-left: 15px">Info/Edit page of  rectangle</h2>
             </div>
 
             <div style="padding: 0 15px 0 15px">
@@ -36,10 +36,16 @@
                         <input type="text" id="name" name="name" value="<%= results[0].name  %>" style=" width: 150px!important;">
                     </th>
                     <th style="width: 20%; color: #494b4c; height: 30px">
-                        <select id="color" name="color" value="<%= results[0].color %>" style="width: 150px">
-                            <option selected="<%= results[0].color === "red" %>" value="red">Red</option>
-                            <option selected="<%= results[0].color === "black" %>" value="black">Black</option>
-                            <option selected="<%= results[0].color === "blue" %>" value="blue">Blue</option>
+                        <select id="color" name="color" style="width: 150px">
+                            <option selected disabled hidden>choose option</option>
+                            <option value="red">Red</option>
+                            <option value="black">Black</option>
+                            <option value="blue">Blue</option>
+                            <option value="aqua">Aqua</option>
+                            <option value="navy">Navy</option>
+                            <option value="purple">Purple</option>
+                            <option value="lime">Lime</option>
+                            <option value="yellow">Yellow</option>
                             </select></th>
                     <th style="width: 20%; color: #494b4c; height: 30px">
                         <input id="width" name="width" value="<%= results[0].width  %>" type="number">
@@ -49,15 +55,21 @@
                     </th>
                     <th style="width: 20%; color: #494b4c; height: 30px">
                         <select id="bordercolor" name="bordercolor" style="width: 150px">
-                            <option selected="<%= results[0].color === "red"  %>" value="red">Red</option>
-                            <option selected="<%= results[0].color === "black" %>" value="black">Black</option>
-                            <option selected="<%= results[0].color === "blue" %>" value="blue">Blue</option>
+                            <option selected disabled hidden>choose option</option>
+                            <option value="red">Red</option>
+                            <option value="black">Black</option>
+                            <option value="blue">Blue</option>
+                            <option value="aqua">Aqua</option>
+                            <option value="navy">Navy</option>
+                            <option value="purple">Purple</option>
+                            <option value="lime">Lime</option>
+                            <option value="yellow">Yellow</option>
                         </select>
                     </th>
 
                 </table>
             </div>
-            <h3 style="margin-left: 15px; margin-top: 20px"><%= results[0].name  %> </h3>
+            <h3 style="margin-left: 15px; margin-top: 20px"> name: <%= results[0].name  %> , color: <%= results[0].color  %> , width: <%= results[0].width  %>, height: <%= results[0].height  %>, borderColor: <%= results[0].bordercolor  %> </h3>
             <div style="margin-left: 15px; margin-top: 20px; height: <%= results[0].height  %>px; width: <%= results[0].width  %>px; background-color: <%= results[0].color  %>; border: solid 2px <%= results[0].bordercolor  %>">
             </div>
             <div class="row" style="width: 100%; padding-left: 15px; padding-top: 30px">
@@ -65,7 +77,6 @@
             </div>
         </div>
         </form>
-        <button style="width: 132px" onclick="goBackFromEdit()">Back</button>
         <div class="row" style="width: 100%; height: 40px; background-color: #857351; position: absolute; bottom: 0">
 
         </div>

@@ -3,7 +3,8 @@ addNew = () => {
 }
 
 goBack = () => {
-    window.location.assign(window.location.href.substr(0 ,window.location.href.length - 13) + "firstPage")
+    let newUrl = window.location.href.substr(0 ,window.location.href.length - 13) + "firstPage"
+    window.location.href = newUrl
 }
 
 goBackFromEdit = () => {
@@ -45,3 +46,35 @@ addNewRec = () => {
     }
 
 }
+
+validation = () => {
+    let name = document.getElementById("name").value
+
+    let color = document.getElementById("color").value
+    let width =  parseInt(document.getElementById("width").value)
+    let height =  parseInt(document.getElementById("height").value)
+    let bordercolor = document.getElementById("bordercolor").value
+
+    if(name.length === 0 || name.length > 50){
+        alert("Name should not be empty or have more than 50 symbols")
+        return false
+    }
+    if(color.length === 0 || color.length > 50 || color === "choose option"){
+        alert("Color should not be empty")
+        return false
+    }
+    if(bordercolor.length === 0 || bordercolor.length > 50 || bordercolor === "choose option"){
+        alert("BorderColor should not be empty")
+        return false
+    }
+    if(width < 1 || width > 300 || isNaN(width)){
+        alert("Width must be an integer from 1 to 300")
+        return false
+    }
+    if(height < 1 || height > 300 || isNaN(height)){
+        alert("Height must be an integer from 1 to 300")
+        return false
+    }
+        return true
+}
+

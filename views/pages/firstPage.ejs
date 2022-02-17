@@ -15,7 +15,7 @@
         </div>
 
         <h1 style="padding-left: 28px" class="mainText">Rectangle app</h1>
-        <div class="row" id="Container" style="width: 40%; height: 650px; background-color: #d3d3d5; margin-left: 30px" ;>
+        <div class="row" id="Container" style="width: 40%; height: 300px; background-color: #d3d3d5; margin-left: 30px" ;>
             <div class="column" style="color: #000000; padding-top: 20px; width: 100%">
                 <h2 style="padding-left: 15px">All rectangles</h2>
             </div>
@@ -27,9 +27,9 @@
                         <th style="width: 10%; background-color: #e8e4e4; color: #0a0a0a">Color</th>
                         <th style="width: 10%; background-color: #e8e4e4; color: #0a0a0a">Functionality</th>
                     </tr>
-                    <% results.forEach(function(r) {
+                    <% results.forEach(function(r, index) {
                         %>
-                    <tr style="height: 30px" secondId="position">
+                    <tr style="height: 30px" id="row<%= index  %>">
                         <th><a href="/rectanglePage<%= r.Id  %>"><%= r.name  %></a></th>
                         <th><%= r.color  %></th>
                         <th style="width: 10%; color: #494b4c">
@@ -40,6 +40,21 @@
                         </th>
                     </tr>
                     <%  })%>
+
+                    <script type="text/javascript">
+                        (function() {
+                            let amountOfRows = 0
+                            for (let i = 0; i < 10; i++){
+                                if (document.getElementById("row" + i) !== null){
+                                    amountOfRows++
+                                }
+                            }
+                            if (amountOfRows > 3){
+                                document.getElementById("Container").style.height = (300 + (amountOfRows-2)*30).toString() + "px"
+                            }
+
+                        })();
+                    </script>
 
                 </table>
             </div>
