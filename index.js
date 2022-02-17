@@ -22,12 +22,12 @@ var app = express()
         console.log(getRectangles)
         pool.query(getRectangles, (error, result) => {
             if (error){
+                console.log("MY LOG" + error)
                 res.end(error)
-                console.log(error)
             }
             else{
                 var data = {results: result.rows}
-                console.log(data)
+                console.log("MY LOG" + data)
                 res.render('pages/firstPage.ejs', data)
             }
 
