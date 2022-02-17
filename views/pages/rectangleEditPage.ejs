@@ -16,7 +16,7 @@
 
         <h1 style="padding-left: 28px" class="mainText">Rectangle app</h1>
         <button style="width: 132px; margin-left: 29px" onclick="goBackFromEdit()">Back</button>
-        <form action="/updateRectangle<%= results[0].id  %>" onsubmit="return validation()" method="post" id="form">
+        <form action="/updateRectangle<%= results[0].id  %>" onsubmit="return validation('myEditButton')" method="post" id="form">
         <div class="row" id="Container" style="width: 70%; height: 650px; background-color: #d3d3d5; margin-left: 30px" ;>
             <div class="column" style="color: #000000; padding-top: 20px; width: 100%">
                 <h2 style="padding-left: 15px">Info/Edit page of  rectangle</h2>

@@ -7,16 +7,8 @@ goBack = () => {
     window.location.href = newUrl
 }
 
-onAdd = () => {
-    var mybutton = document.getElementById("myButton");
-    mybutton.disabled = true;
-    setTimeout(function() {
-        mybutton.disabled = false;
-    }, 2000)
-}
-
-onEdit = () => {
-    var mybutton = document.getElementById("myEditButton");
+onAdd = (id) => {
+    var mybutton = document.getElementById(id);
     mybutton.disabled = true;
     setTimeout(function() {
         mybutton.disabled = false;
@@ -63,8 +55,8 @@ addNewRec = () => {
 
 }
 
-validation = () => {
-    onAdd()
+validation = (id) => {
+    onAdd(id)
     let name = document.getElementById("name").value
 
     let color = document.getElementById("color").value
