@@ -6,7 +6,7 @@ const { Pool } = require('pg');
 var pool;
 
 pool = new Pool({
-    connectionString: 'postgres://lbfsnzxoqsqubg:38f52ecc713f5701251f31bca43688cd3cffea9bfa4767584ea2f07775de1662@ec2-54-87-99-12.compute-1.amazonaws.com:5432/dejea52roav95b'
+    connectionString: process.env.DATABASE_URl
 })
 var uuid = require('uuid');
 
