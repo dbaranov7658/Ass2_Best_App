@@ -18,7 +18,7 @@ var app = express()
     app.set('view engine', 'ejs')
     app.get('/', (req, res) => res.render('pages/index'))
     app.get('/firstPage', (req,res)=>{
-        var getRectangles = 'SELECT * FROM rec';
+        var getRectangles = 'SELECT * FROM rec + ";"';
         console.log(getRectangles)
         pool.query(getRectangles, (error, result) => {
             if (error){
