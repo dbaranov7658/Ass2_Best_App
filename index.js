@@ -19,15 +19,15 @@ var app = express()
     app.get('/', (req, res) => res.render('pages/index'))
     app.get('/firstPage', (req,res)=>{
         var getRectangles = 'SELECT * FROM rec';
-        console.log(getRectangles)
+        console.log("MY LOG ----------------------------" + getRectangles)
         pool.query(getRectangles, (error, result) => {
             if (error){
-                console.log("MY LOG" + error)
+                console.log("MY LOG -------------------------" + error)
                 res.end(error)
             }
             else{
                 var data = {results: result.rows}
-                console.log("MY LOG" + data)
+                console.log("MY LOG ----------------------------" + data)
                 res.render('pages/firstPage.ejs', data)
             }
 
