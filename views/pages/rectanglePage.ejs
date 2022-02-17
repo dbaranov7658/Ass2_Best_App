@@ -16,7 +16,7 @@
 
         <h1 style="padding-left: 28px" class="mainText">Rectangle app</h1>
         <button style="width: 132px; margin-left: 29px" onclick="goBack()">Back</button>
-        <form action="/addNewRectangle" method="post" onsubmit="return validation('myButton')">
+        <form action="/addNewRectangle" method="post" onsubmit="return validation()">
         <div class="row" id="Container" style="width: 70%; height: 650px; background-color: #d3d3d5; margin-left: 30px" ;>
             <div class="column" style="color: #000000; padding-top: 20px; width: 100%">
                 <h2 style="padding-left: 15px">Adding new rectangle</h2>
@@ -33,7 +33,7 @@
                         <th style="width: 13%; background-color: #e8e4e4; color: #0a0a0a">Border Color</th>
                     </tr>
                     <th style="width: 20%; color: #494b4c; height: 30px">
-                        <input type="text" id="name" name="name" style=" width: 150px!important;">
+                        <input type="text" id="inputEdit" name="name" style=" width: 150px!important;">
                     </th>
                     <th style="width: 20%; color: #494b4c; height: 30px">
                         <select id="color" name="color" style="width: 150px">
