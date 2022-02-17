@@ -58,7 +58,7 @@ var app = express()
         }
         else{
             var data = {results: result.rows}
-            console.log("MY LOG ----------------------------" +   data.results.name)
+            console.log("MY LOG ----------------------------" +   data.results[name])
             res.render('pages/rectangleEditPage.ejs', data)
         }
 
