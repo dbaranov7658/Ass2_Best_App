@@ -48,7 +48,7 @@ var app = express()
     })
     app.get('/rectanglePage:id', (req,res)=>{
     var getRectangles = 'SELECT * FROM public.rec WHERE ' + '"Id"' + ' = ' + "'" + req.params.id + "';"
-    pool.query(getRectangles, (error, result) => {
+    pool.query(getRectangles, (error, result) => {np
         if (error){
             res.end(error)
         }
