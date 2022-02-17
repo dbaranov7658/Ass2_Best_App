@@ -76,7 +76,7 @@ var app = express()
         })
     })
     app.post('/deleteRectangle:id', (req,res)=>{
-            var getRectangles = 'DELETE FROM public.rec WHERE ' + '"Id"' + ' = ' + "'" + req.params.id + "' " + "RETURNING *;"
+            var getRectangles = 'DELETE FROM rec WHERE ' + '"id"' + ' = ' + "'" + req.params.id + "' " + "RETURNING *;"
 
             pool.query(getRectangles, (error, result) => {
                 if (error){
