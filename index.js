@@ -3,14 +3,14 @@ const path = require('path')
 const PORT = process.env.PORT || 5000
 
 const { Pool } = require('pg');
+var pool;
 
-const pool = new Pool({
-    user: process.env.PG_USER,      //postgres user
-    host: process.env.PG_ENDPOINT,  //localhost (I also tried 127.0.0.1)
-    database: process.env.PG_DB,    //database name to connect to
-    password: process.env.PG_PASS,  //postgres user password
-    port: process.env.PG_PORT       //5432
-});
+pool = new Pool({
+    connectionString: process.env.DATABASE_URl,
+    ssl: {
+        rejectUnauthorized: false
+    }
+})
 var uuid = require('uuid');
 
 var app = express()
