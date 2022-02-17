@@ -60,6 +60,7 @@ var app = express()
             var data = {results: result.rows}
             console.log(data.results)
             console.log("MY LOG ----------------------------" +   data.results[0].name.toString())
+            data.results[0].name = data.results[0].name.toString()
             res.render('pages/rectangleEditPage.ejs', data)
         }
 
