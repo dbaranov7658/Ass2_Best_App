@@ -15,7 +15,7 @@ goBackFromEdit = () => {
 addNewRec = () => {
     let isValidate = true
 
-    let name = document.getElementById("name").value
+    let name = document.getElementById("inputEdit").value
 
     let color = document.getElementById("color").value
     let width =  parseInt(document.getElementById("width").value)
@@ -49,7 +49,7 @@ addNewRec = () => {
 }
 
 validation = () => {
-    let name = document.getElementById("name").value
+    let name = document.getElementById("inputEdit").value
 
     let color = document.getElementById("color").value
     let width =  parseInt(document.getElementById("width").value)
@@ -77,9 +77,5 @@ validation = () => {
         return false
     }
         return true
-}
-
-getName = (name) => {
-    return "test"
 }
 
