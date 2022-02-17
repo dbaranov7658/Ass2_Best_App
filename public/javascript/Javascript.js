@@ -5,6 +5,11 @@ addNew = () => {
 goBack = () => {
     let newUrl = window.location.href.substr(0 ,window.location.href.length - 13) + "firstPage"
     window.location.href = newUrl
+    var mybutton = document.getElementById("myButton");
+    mybutton.disabled = true;
+    setTimeout(function() {
+        mybutton.disabled = false;
+    }, 2000)
 }
 
 goBackFromEdit = () => {
