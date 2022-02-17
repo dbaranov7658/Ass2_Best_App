@@ -6,7 +6,7 @@ const { Pool } = require('pg');
 var pool;
 
 pool = new Pool({
-    connectionString: process.env.DATABASE_URL
+    connectionString: process.env.DATABASE_URl
 })
 var uuid = require('uuid');
 
@@ -20,6 +20,7 @@ var app = express()
     app.get('/firstPage', (req,res)=>{
         var getRectangles = 'SELECT * FROM rec';
         console.log("MY LOG ----------------------------" + getRectangles)
+        console.log(pool)
         pool.query(getRectangles, (error, result) => {
             if (error){
                 console.log("MY LOG -------------------------" + error)
