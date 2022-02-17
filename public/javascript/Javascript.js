@@ -7,13 +7,6 @@ goBack = () => {
     window.location.href = newUrl
 }
 
-onAdd = (id) => {
-    var mybutton = document.getElementById(id);
-    mybutton.disabled = true;
-    setTimeout(function() {
-        mybutton.disabled = false;
-    }, 2000)
-}
 
 goBackFromEdit = () => {
     window.location.assign(window.location.href.substr(0 ,window.location.href.length - 49) + "firstPage")
@@ -55,8 +48,7 @@ addNewRec = () => {
 
 }
 
-validation = (id) => {
-    onAdd(id)
+validation = () => {
     let name = document.getElementById("name").value
 
     let color = document.getElementById("color").value
