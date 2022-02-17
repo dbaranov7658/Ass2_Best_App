@@ -87,3 +87,7 @@ validation = (id) => {
         return true
 }
 
+getName = (name) => {
+    return "test"
+}
+
