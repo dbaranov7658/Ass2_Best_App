@@ -58,7 +58,7 @@ var app = express()
         }
         else{
             var data = {results: result.rows}
-            console.log("MY LOG ----------------------------" +   data.results[0].name.replaceAll(' ', ''))
+            console.log("MY LOG ----------------------------" +   data.results[0].name.toString())
             res.render('pages/rectangleEditPage.ejs', data)
         }
 
