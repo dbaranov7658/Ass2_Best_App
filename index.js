@@ -57,8 +57,8 @@ var app = express()
             res.end(error)
         }
         else{
-            result.rows.name = result.rows.replaceAll(' ', '')
             var data = {results: result.rows}
+            console.log(data)
             res.render('pages/rectangleEditPage.ejs', data)
         }
 
