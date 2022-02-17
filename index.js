@@ -89,7 +89,7 @@ var app = express()
             })
 })
 app.post('/updateRectangle:id', (req,res)=>{
-    var getRectangles = 'UPDATE rec SET name = ' + "'" + req.body.name + "', color = " + "'" + req.body.color + "', width = "  + parseInt(req.body.width) + ", height = " + + parseInt(req.body.height) + ", bordercolor = "  + "'" + req.body.bordercolor + "' WHERE " + '"Id"' + ' = ' + "'" + req.params.id + "';"
+    var getRectangles = 'UPDATE rec SET name = ' + "'" + req.body.name + "', color = " + "'" + req.body.color + "', width = "  + parseInt(req.body.width) + ", height = " + + parseInt(req.body.height) + ", bordercolor = "  + "'" + req.body.bordercolor + "' WHERE " + '"id"' + ' = ' + "'" + req.params.id + "';"
     console.log(getRectangles)
 
     pool.query(getRectangles, (error, result) => {
