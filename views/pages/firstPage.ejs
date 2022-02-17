@@ -30,10 +30,10 @@
                     <% results.forEach(function(r, index) {
                         %>
                     <tr style="height: 30px" id="row<%= index  %>">
-                        <th><a href="/rectanglePage<%= r.Id  %>"><%= r.name  %></a></th>
+                        <th><a href="/rectanglePage<%= r.id  %>"><%= r.name  %></a></th>
                         <th><%= r.color  %></th>
                         <th style="width: 10%; color: #494b4c">
-                            <form action="/deleteRectangle<%= r.Id  %>" method="post">
+                            <form action="/deleteRectangle<%= r.id  %>" method="post">
                                 <button type="submit" style="height: 30px">Delete</button>
                             </form>
 
