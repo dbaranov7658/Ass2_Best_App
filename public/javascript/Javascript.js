@@ -8,8 +8,7 @@ goBack = () => {
 }
 
 
-goBackFromEdit = (e) => {
-    e.stopPropagation();
+goBackFromEdit = () => {
     window.location.assign(window.location.href.substr(0 ,window.location.href.length - 49) + "firstPage")
 }
 
